@@ -16,6 +16,12 @@
   "blogs": [
     {
       "topic": "ux",
+      "title": "Millers Law",
+      "url": "https://www.linkedin.com/pulse/millers-law-goutham-ravi-kumar-ravutla-xnnzc/?trackingId=ZtJYTj7HTXGKSdvvbGQjUA%3D%3D",
+      "blurb": "The working memory of the average person can retain approximately 7 (+- 2) items at a given time."
+    },
+    {
+      "topic": "ux",
       "title": "Hicks Law",
       "url": "https://www.linkedin.com/pulse/hicks-law-goutham-ravi-kumar-ravutla-nd9mc/?trackingId=j1x7W75JQ8qyUcgChP2Jhg%3D%3D",
       "blurb": "The time taken to make a decision increases with the complexity and the number of options."
