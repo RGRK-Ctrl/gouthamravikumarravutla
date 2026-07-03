@@ -64,7 +64,13 @@
       "link": "Blog",
       "external": true,
       "blurb": "A food-image classifier for 101 items with confidence scores, built on EfficientNetV2B0 transfer learning, a custom preprocessing pipeline, and a feedback-driven dataset improvement loop.",
-      "articles": []
+      "articles": [
+        {
+          "title": "🚀 Building an AI-powered Food Classification System 🍔🍕🥗",
+          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-journey-ravutla-g2irc/?trackingId=ZhAecSyhScKPieJMkjYGIA%3D%3D",
+          "blurb": "Created a fully functioning food recognition app that can classify 101 different food items with the basic capability to upload & predict, and generate proper responses with confidence scores for further analysis."
+        }
+      ]
     },
     {
       "name": "HARDCOPY",
