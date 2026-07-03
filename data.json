@@ -89,10 +89,28 @@
       "blurb": "A food-image classifier for 101 items with confidence scores, built on EfficientNetV2B0 transfer learning, a custom preprocessing pipeline, and a feedback-driven dataset improvement loop.",
       "articles": [
         {
-          "title": "🚀 Building an AI-powered Food Classification System 🍔🍕🥗– Journey So Far!",
+          "title": "🚀 Building an AI-powered Food Classification System 🍔🍕🥗",
           "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-journey-ravutla-g2irc/?trackingId=ZhAecSyhScKPieJMkjYGIA%3D%3D",
           "source": "LinkedIn",
           "blurb": "Fully functioning food recognition app that can classify 101 different food items with the basic capability to upload & predict, and generate proper responses with confidence scores for further analysis."
+        },
+        {
+          "title": "TECH BLOG -1",
+          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-tech-ravutla-1uscc/?trackingId=nRcahwSFQTGMo7NTbKCfDQ%3D%3D",
+          "source": "LinkedIn",
+          "blurb": "Technical explanation about the model training steps that powered our food detector app development."
+        },
+        {
+          "title": "TECH BLOG -2",
+          "url": "https://www.linkedin.com/pulse/copy-building-ai-powered-food-classification-system-ravutla-bkacc/?trackingId=GVtwhO%2BPTCaXB6E2PB%2BPKw%3D%3D",
+          "source": "LinkedIn",
+          "blurb": "Dataset splitting, storage, and efficient loading sorted out in Part 1, the next major steps were image preprocessing, training, and evaluation"
+        },
+        {
+          "title": "Product Breakdown",
+          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-product-ravutla-qamcc/?trackingId=pSij6KHiTPq7%2F3%2F0yB0Gzw%3D%3D",
+          "source": "LinkedIn",
+          "blurb": "Identify over 100 food items, complete with dataset analysis, model training stages, evaluation artifacts, predictions, and a user-facing dashboard"
         }
       ]
     },
