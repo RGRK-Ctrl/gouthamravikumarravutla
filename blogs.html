@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blogs · Goutham Ravi Kumar Ravutla</title>
+<meta name="description" content="Product writing — articles published on LinkedIn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">Goutham<span>.</span></a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <div class="navlinks" id="nav">
+      <a href="index.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="blogs.html" class="subnav-active">Blogs</a>
+      <a href="contact.html" class="btn">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Blogs</p>
+    <h1>Writing, published on LinkedIn.</h1>
+    <p class="lede">Each card links straight to the full article on LinkedIn.</p>
+  </div>
+</header>
+
+<section style="padding-top:36px">
+  <div class="wrap">
+    <div class="posts" id="posts"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Goutham Ravi Kumar Ravutla.</span>
+    <span><a href="index.html">Home</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* =========================================================
+   BLOGS DATA  —  the only thing you edit.
+
+   TO ADD A LINKEDIN BLOG: copy the block below, paste it at the
+   top of the list, and fill in the four fields. Newest first.
+
+     {
+       title: "Your article title",
+       url:   "https://www.linkedin.com/pulse/your-article-slug",
+       tag:   "Product Management",
+       blurb: "One or two lines summarising the article."
+     },
+   ========================================================= */
+const BLOGS = [
+  {
+    title: "[Your LinkedIn article title]",
+    url:   "[LINKEDIN_ARTICLE_URL_1]",
+    tag:   "AI",
+    blurb: "[One-line summary of the article.]"
+  },
+  {
+    title: "[Your LinkedIn article title]",
+    url:   "[LINKEDIN_ARTICLE_URL_2]",
+    tag:   "Product Management",
+    blurb: "[One-line summary of the article.]"
+  },
+  {
+    title: "[Your LinkedIn article title]",
+    url:   "[LINKEDIN_ARTICLE_URL_3]",
+    tag:   "UX Laws",
+    blurb: "[One-line summary of the article.]"
+  }
+];
+/* ========================================================= */
+
+document.getElementById('posts').innerHTML = BLOGS.map(b => `
+  <a class="post-card" href="${b.url}" target="_blank" rel="noopener">
+    <div class="meta">${b.tag} &middot; <span class="src linkedin">LinkedIn &#8599;</span></div>
+    <h3>${b.title}</h3>
+    <p>${b.blurb}</p>
+    <span class="readmore">Read on LinkedIn &rarr;</span>
+  </a>`).join('');
+</script>
+</body>
+</html>

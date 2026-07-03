@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work · Goutham Ravi Kumar Ravutla</title>
+<meta name="description" content="Product work and projects, grouped by topic: UX Laws, AI, and Product Management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">Goutham<span>.</span></a>
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <div class="navlinks" id="nav">
+      <a href="index.html">About</a>
+      <a href="work.html" class="subnav-active">Work</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="contact.html" class="btn">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Work</p>
+    <h1>Projects and topics I work in.</h1>
+    <p class="lede">Grouped by the three areas I build and write about. Filter to jump to one.</p>
+  </div>
+</header>
+
+<section style="padding-top:36px">
+  <div class="wrap">
+    <div class="filters" id="filters"></div>
+    <div id="groups"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Goutham Ravi Kumar Ravutla.</span>
+    <span><a href="index.html">Home</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* =========================================================
+   WORK PAGE DATA  —  the only thing you edit.
+
+   TO ADD A NEW TOPIC: add one line to TOPICS:
+     { id:"unique_id", name:"Topic Name", desc:"One line about it." },
+
+   TO ADD AN ITEM: add one block to ITEMS:
+     { topic:"matching_id", title:"Title", blurb:"One line.",
+       url:"https://...", link:"GitHub", external:true },
+   - link can be "GitHub", "LinkedIn", "Blog", "Live" or "" (no button)
+   - external:true opens in a new tab
+   ========================================================= */
+const TOPICS = [
+  { id:"ux", name:"UX Laws",           desc:"Applying UX principles and heuristics to product decisions." },
+  { id:"ai", name:"AI",                desc:"ML, GenAI, RAG and multi-agent systems — built and shipped." },
+  { id:"pm", name:"Product Management",desc:"Discovery, prioritization, roadmapping and 0&rarr;1 product craft." }
+];
+
+const ITEMS = [
+  // ---- AI ----
+  { topic:"ai", title:"PM Navigator (2026)", link:"GitHub", external:true,
+    url:"[PM_NAVIGATOR_GITHUB_URL]",
+    blurb:"RAG + multi-agent system that reads the live PM job market, finds your skill gaps, and generates a 30/60/90-day plan. Built locally on Ollama with qwen2.5:14b and a ChromaDB knowledge base." },
+  { topic:"ai", title:"Food Detector App (2025)", link:"Blog", external:true,
+    url:"[FOOD_DETECTOR_BLOG_URL]",
+    blurb:"Vision model classifying 101 food items with confidence scores, using EfficientNetV2B0 transfer learning and a feedback-driven dataset loop." },
+  { topic:"ai", title:"GenAI capabilities at Zoho QuickML", link:"", external:false,
+    url:"",
+    blurb:"Led product definition for LLM serving, RAG-based knowledge systems, and foundational model integration on a centralized AI platform." },
+
+  // ---- Product Management ----
+  { topic:"pm", title:"QuickML pipeline builder", link:"", external:false,
+    url:"",
+    blurb:"Own the drag-and-drop workflow engine that lets non-technical users build end-to-end ML pipelines. Supports 2K+ businesses." },
+  { topic:"pm", title:"HARDCOPY (2021)", link:"Blog", external:true,
+    url:"[HARDCOPY_BLOG_URL]",
+    blurb:"Founded a peer-to-peer book lending platform. User research (55+ responses), a 5-person cross-functional team, ~100 wireframes, and an MVP roadmap." },
+
+  // ---- UX Laws ----
+  { topic:"ux", title:"[Your first UX Laws write-up]", link:"LinkedIn", external:true,
+    url:"[UX_ARTICLE_URL]",
+    blurb:"[One line on which UX law you applied and the product decision it drove.]" }
+];
+/* ========================================================= */
+
+const filtersEl = document.getElementById('filters');
+const groupsEl  = document.getElementById('groups');
+let active = "all";
+
+function render(){
+  const chips = [{id:"all",name:"All"}, ...TOPICS];
+  filtersEl.innerHTML = chips.map(c =>
+    `<button class="chip ${c.id===active?'active':''}" data-id="${c.id}">${c.name}</button>`).join('');
+  filtersEl.querySelectorAll('.chip').forEach(b => b.onclick = () => { active=b.dataset.id; render(); });
+
+  const shown = TOPICS.filter(t => active==="all" || t.id===active);
+  let html = "";
+  shown.forEach(t => {
+    const items = ITEMS.filter(i => i.topic===t.id);
+    html += `<div class="pillar"><div class="pillar-head"><h2>${t.name}</h2><span class="count">${items.length} item${items.length!==1?'s':''}</span></div><p class="desc">${t.desc}</p><div class="link-list">`;
+    if(!items.length){ html += `<p class="empty">Nothing here yet.</p>`; }
+    items.forEach(i => {
+      const badge = i.link ? `<span class="src ${i.link.toLowerCase()==='linkedin'?'linkedin':'onsite'}">${i.link}${i.external?' &#8599;':''}</span>` : '';
+      const tag = i.url ? 'a' : 'div';
+      const attrs = i.url ? `href="${i.url}"${i.external?' target="_blank" rel="noopener"':''}` : '';
+      html += `<${tag} class="link-item" ${attrs}>
+        <span class="li-main"><h3>${i.title} ${badge}</h3><p>${i.blurb}</p></span></${tag}>`;
+    });
+    html += `</div></div>`;
+  });
+  groupsEl.innerHTML = html;
+}
+render();
+</script>
+</body>
+</html>
