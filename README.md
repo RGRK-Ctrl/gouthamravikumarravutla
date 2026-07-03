@@ -17,3 +17,11 @@ Connect, fill the form, Publish. It commits to data.json and the live site updat
 1. Copy index.html, work.html, contact.html, data.json, styles.css, script.js into your repo folder
 2. git add -A && git commit -m "Data-driven site" && git push
 3. Settings -> Pages -> main -> / (root)
+
+## SEO / social
+og-image.png, favicon.png, apple-touch-icon.png, sitemap.xml, robots.txt are in the repo root.
+To regenerate the OG card later, re-run the image script or ask.
+
+## Blog/article source
+Each blog and project article has a "Source" (LinkedIn, Medium, Substack, etc.). The card badge
+and colour follow the source automatically. Set it in the admin form.
