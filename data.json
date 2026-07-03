@@ -1,30 +1,72 @@
 {
   "blogTopics": [
-    { "id": "ux", "name": "UX Laws" },
-    { "id": "ai", "name": "AI" },
-    { "id": "pm", "name": "Product Management" }
+    {
+      "id": "ux",
+      "name": "UX Laws"
+    },
+    {
+      "id": "ai",
+      "name": "AI"
+    },
+    {
+      "id": "pm",
+      "name": "Product Management"
+    }
   ],
   "blogs": [
-    { "topic": "ai", "title": "[Your LinkedIn article title]", "url": "[LINKEDIN_ARTICLE_URL_1]", "blurb": "[One-line summary of the article.]" },
-    { "topic": "pm", "title": "[Your LinkedIn article title]", "url": "[LINKEDIN_ARTICLE_URL_2]", "blurb": "[One-line summary of the article.]" },
-    { "topic": "ux", "title": "[Your LinkedIn article title]", "url": "[LINKEDIN_ARTICLE_URL_3]", "blurb": "[One-line summary of the article.]" }
+    {
+      "topic": "ux",
+      "title": "Hicks Law",
+      "url": "https://www.linkedin.com/pulse/hicks-law-goutham-ravi-kumar-ravutla-nd9mc/?trackingId=j1x7W75JQ8qyUcgChP2Jhg%3D%3D",
+      "blurb": "The time taken to make a decision increases with the complexity and the number of options."
+    },
+    {
+      "topic": "ai",
+      "title": "[Your LinkedIn article title]",
+      "url": "[LINKEDIN_ARTICLE_URL_1]",
+      "blurb": "[One-line summary of the article.]"
+    },
+    {
+      "topic": "pm",
+      "title": "[Your LinkedIn article title]",
+      "url": "[LINKEDIN_ARTICLE_URL_2]",
+      "blurb": "[One-line summary of the article.]"
+    },
+    {
+      "topic": "ux",
+      "title": "[Your LinkedIn article title]",
+      "url": "[LINKEDIN_ARTICLE_URL_3]",
+      "blurb": "[One-line summary of the article.]"
+    }
   ],
   "projects": [
     {
-      "name": "PM Navigator", "year": "2026", "type": "RAG + multi-agent system",
-      "url": "[PM_NAVIGATOR_GITHUB_URL]", "link": "GitHub", "external": true,
+      "name": "PM Navigator",
+      "year": "2026",
+      "type": "RAG + multi-agent system",
+      "url": "[PM_NAVIGATOR_GITHUB_URL]",
+      "link": "GitHub",
+      "external": true,
       "blurb": "An AI multi-agent system that reads the live PM job market, finds your skill gaps against standard competency frameworks, and generates a 30/60/90-day plan. Built locally on Ollama (qwen2.5:14b) with a ChromaDB knowledge base and reflexion-pattern critique agents.",
       "articles": []
     },
     {
-      "name": "Food Detector App", "year": "2025", "type": "Computer vision",
-      "url": "[FOOD_DETECTOR_BLOG_URL]", "link": "Blog", "external": true,
+      "name": "Food Detector App",
+      "year": "2025",
+      "type": "Computer vision",
+      "url": "[FOOD_DETECTOR_BLOG_URL]",
+      "link": "Blog",
+      "external": true,
       "blurb": "A food-image classifier for 101 items with confidence scores, built on EfficientNetV2B0 transfer learning, a custom preprocessing pipeline, and a feedback-driven dataset improvement loop.",
       "articles": []
     },
     {
-      "name": "HARDCOPY", "year": "2021", "type": "Peer-to-peer mobile app",
-      "url": "[HARDCOPY_BLOG_URL]", "link": "Blog", "external": true,
+      "name": "HARDCOPY",
+      "year": "2021",
+      "type": "Peer-to-peer mobile app",
+      "url": "[HARDCOPY_BLOG_URL]",
+      "link": "Blog",
+      "external": true,
       "blurb": "Founded a peer-to-peer book lending/borrowing platform. Ran user research (55+ survey responses), led a 5-person cross-functional team, scoped ~100 low-fi wireframes, and built the MVP roadmap.",
       "articles": []
     }
