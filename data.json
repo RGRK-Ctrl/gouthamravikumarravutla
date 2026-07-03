@@ -55,9 +55,21 @@
   "blogs": [
     {
       "topic": "ux",
+      "title": "Fitt's Law",
+      "url": "https://www.linkedin.com/pulse/fitts-law-goutham-ravi-kumar-ravutla-biazf/?trackingId=3bgaLm7kTjyNKYlu%2BAFEZQ%3D%3D",
+      "blurb": "The time required to reach a target depends on the distance to the target and the size of the target"
+    },
+    {
+      "topic": "ux",
+      "title": "Jakob's Law",
+      "url": "https://www.linkedin.com/pulse/jakobs-law-goutham-ravi-kumar-ravutla-mljkc/?trackingId=mt5X96dFR1uZfciSPANCAg%3D%3D",
+      "blurb": "Users spend most of their time on other sites, and they expect your site to work the same way."
+    },
+    {
+      "topic": "ux",
       "title": "Miller's Law",
       "url": "https://www.linkedin.com/pulse/millers-law-goutham-ravi-kumar-ravutla-xnnzc/?trackingId=ZtJYTj7HTXGKSdvvbGQjUA%3D%3D",
-      "blurb": "the working memory of the average person can retain approximately 7 (+- 2) items at a given time."
+      "blurb": "The working memory of the average person can retain approximately 7 (+- 2) items at a given time."
     },
     {
       "topic": "ux",
@@ -90,6 +102,16 @@
           "title": "🚀 Building an AI-powered Food Classification System 🍔🍕🥗",
           "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-journey-ravutla-g2irc/?trackingId=ZhAecSyhScKPieJMkjYGIA%3D%3D",
           "blurb": "A fully functioning food recognition app that can classify 101 different food items with the basic capability to upload & predict, and generate proper responses with confidence scores for further analysis"
+        },
+        {
+          "title": "TECH BLOG -1",
+          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-tech-ravutla-1uscc/?trackingId=nRcahwSFQTGMo7NTbKCfDQ%3D%3D",
+          "blurb": "Our Food Detector app uses a Convolutional Neural Network, a class of deep learning algorithms, is used to train our classification model. In this article, we will go through the technical design choices and engineering that brought it to life"
+        },
+        {
+          "title": "TECH BLOG - 2",
+          "url": "https://www.linkedin.com/pulse/copy-building-ai-powered-food-classification-system-ravutla-bkacc/?trackingId=GVtwhO%2BPTCaXB6E2PB%2BPKw%3D%3D",
+          "blurb": "The next major steps were image preprocessing, training, and evaluation in the Model building process"
         }
       ]
     },
