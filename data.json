@@ -1,14 +1,37 @@
 {
+  "profile": {
+    "role": "Associate Product Manager · Zoho QuickML",
+    "headline": "I build AI platforms that non-technical users can actually use.",
+    "lede": "Associate Product Manager with 3+ years in B2B SaaS and 5 years in software, currently building AI/ML and Generative AI platform capabilities at Zoho QuickML — turning complex ML and GenAI workflows into products enterprise teams adopt.",
+    "resumeUrl": "https://github.com/RGRK-Ctrl/gouthamravikumarravutla/blob/main/RavutlaGouthamRaviKumar_Resume%20-PM_Backupcopy.pdf",
+    "email": "gouthamravikumar1994@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/gouthamravutla",
+    "location": "Bangalore, India"
+  },
+  "about": {
+    "heading": "Product built on evidence, shipped with conviction.",
+    "paragraphs": [
+      "I'm a product manager focused on operationalizing AI and data for enterprise customers. At Zoho QuickML I own the pipeline builder — the drag-and-drop workflow engine that lets non-technical users create end-to-end ML pipelines — and led product definition for Generative AI capabilities including LLM serving, RAG-based knowledge systems, and foundational model integration.",
+      "Before product, I spent five years in software engineering at HCL Technologies across network systems, automation, and large-scale data migration. That foundation is why I'm comfortable with API-first platform design and translating deep technical capability into business use cases.",
+      "I care about platform thinking, cross-functional execution, and the unglamorous adoption work that decides whether a product survives."
+    ],
+    "facts": [
+      { "label": "Now", "value": "Associate PM, Zoho QuickML" },
+      { "label": "Focus", "value": "AI/ML & GenAI platforms" },
+      { "label": "Strengths", "value": "Platform thinking · API-first · 0→1" },
+      { "label": "Based in", "value": "Bangalore, India" }
+    ]
+  },
+  "contact": {
+    "heading": "Let's talk product.",
+    "text": "Open to Product Manager and Technical Product Manager roles in teams building AI platforms, developer platforms, and intelligent SaaS."
+  },
   "blogTopics": [
     { "id": "ux", "name": "UX Laws" },
     { "id": "ai", "name": "AI" },
     { "id": "pm", "name": "Product Management" }
   ],
-  "blogs": [
-    { "topic": "ai", "title": "[Your LinkedIn article title]", "url": "[LINKEDIN_ARTICLE_URL_1]", "blurb": "[One-line summary of the article.]" },
-    { "topic": "pm", "title": "[Your LinkedIn article title]", "url": "[LINKEDIN_ARTICLE_URL_2]", "blurb": "[One-line summary of the article.]" },
-    { "topic": "ux", "title": "[Your LinkedIn article title]", "url": "[LINKEDIN_ARTICLE_URL_3]", "blurb": "[One-line summary of the article.]" }
-  ],
+  "blogs": [],
   "projects": [
     {
       "name": "PM Navigator", "year": "2026", "type": "RAG + multi-agent system",

@@ -27,13 +27,13 @@
 <section class="contact" style="padding-top:120px">
   <div class="wrap">
     <p class="eyebrow">Get in touch</p>
-    <h2>Let&rsquo;s talk product.</h2>
-    <p>Open to Product Manager and Technical Product Manager roles in teams building AI platforms, developer platforms, and intelligent SaaS.</p>
+    <h2 id="c-heading">&nbsp;</h2>
+    <p id="c-text"></p>
     <div class="cta-row">
-      <a href="mailto:gouthamravikumar1994@gmail.com" class="btn">Email me</a>
-      <a href="https://www.linkedin.com/in/gouthamravutla" class="btn ghost" target="_blank" rel="noopener">LinkedIn</a>
+      <a id="c-email" class="btn">Email me</a>
+      <a id="c-linkedin" class="btn ghost" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <p class="muted" style="margin-top:28px;font-size:15px">gouthamravikumar1994@gmail.com &middot; Bangalore, India</p>
+    <p class="muted" id="c-foot" style="margin-top:28px;font-size:15px"></p>
   </div>
 </section>
 
@@ -45,5 +45,15 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
+  const p = d.profile || {}, c = d.contact || {};
+  document.getElementById('c-heading').textContent = c.heading || '';
+  document.getElementById('c-text').textContent = c.text || '';
+  document.getElementById('c-email').href = 'mailto:' + (p.email || '');
+  document.getElementById('c-linkedin').href = p.linkedin || '#';
+  document.getElementById('c-foot').textContent = [p.email, p.location].filter(Boolean).join(' · ');
+}).catch(()=>{});
+</script>
 </body>
 </html>

@@ -26,34 +26,25 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <p class="eyebrow reveal">Associate Product Manager · Zoho QuickML</p>
-    <h1 class="reveal">I build AI platforms that non-technical users can actually use.</h1>
-    <p class="lede reveal">Associate Product Manager with 3+ years in B2B SaaS and 5 years in software, currently building AI/ML and Generative AI platform capabilities at Zoho QuickML — turning complex ML and GenAI workflows into products enterprise teams adopt.</p>
-    <div class="cta-row reveal">
+    <p class="eyebrow" id="h-role">&nbsp;</p>
+    <h1 id="h-headline">&nbsp;</h1>
+    <p class="lede" id="h-lede"></p>
+    <div class="cta-row">
       <a href="work.html" class="btn">See my work</a>
-      <a href="https://github.com/RGRK-Ctrl/gouthamravikumarravutla/blob/main/RavutlaGouthamRaviKumar_Resume%20-PM_Backupcopy.pdf" class="btn ghost" target="_blank" rel="noopener">Résumé</a>
+      <a id="h-resume" class="btn ghost" target="_blank" rel="noopener">Résumé</a>
     </div>
   </div>
 </header>
 
 <section id="about">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="section-head">
       <p class="eyebrow">About</p>
-      <h2>Product built on evidence, shipped with conviction.</h2>
+      <h2 id="a-heading">&nbsp;</h2>
     </div>
-    <div class="about-grid reveal">
-      <div>
-        <p>I&rsquo;m a product manager focused on operationalizing AI and data for enterprise customers. At Zoho QuickML I own the pipeline builder — the drag-and-drop workflow engine that lets non-technical users create end-to-end ML pipelines — and led product definition for Generative AI capabilities including LLM serving, RAG-based knowledge systems, and foundational model integration.</p>
-        <p>Before product, I spent five years in software engineering at HCL Technologies across network systems, automation, and large-scale data migration. That foundation is why I&rsquo;m comfortable with API-first platform design and translating deep technical capability into business use cases.</p>
-        <p>I care about platform thinking, cross-functional execution, and the unglamorous adoption work that decides whether a product survives.</p>
-      </div>
-      <dl class="facts">
-        <dt>Now</dt><dd>Associate PM, Zoho QuickML</dd>
-        <dt>Focus</dt><dd>AI/ML &amp; GenAI platforms</dd>
-        <dt>Strengths</dt><dd>Platform thinking · API-first · 0&rarr;1</dd>
-        <dt>Based in</dt><dd>Bangalore, India</dd>
-      </dl>
+    <div class="about-grid">
+      <div id="a-paras"></div>
+      <dl class="facts" id="a-facts"></dl>
     </div>
   </div>
 </section>
@@ -61,10 +52,24 @@
 <footer>
   <div class="wrap">
     <span>&copy; <span id="year"></span> Goutham Ravi Kumar Ravutla. All rights reserved.</span>
-    <span><a href="https://www.linkedin.com/in/gouthamravutla" target="_blank" rel="noopener">LinkedIn</a> &middot; <a href="mailto:gouthamravikumar1994@gmail.com">Email</a></span>
+    <span><a id="f-linkedin" target="_blank" rel="noopener">LinkedIn</a> &middot; <a id="f-email">Email</a></span>
   </div>
 </footer>
 
 <script src="script.js"></script>
+<script>
+fetch('data.json?' + Date.now()).then(r => r.json()).then(d => {
+  const p = d.profile || {}, a = d.about || {};
+  document.getElementById('h-role').textContent = p.role || '';
+  document.getElementById('h-headline').textContent = p.headline || '';
+  document.getElementById('h-lede').textContent = p.lede || '';
+  const rz = document.getElementById('h-resume'); rz.href = p.resumeUrl || '#';
+  document.getElementById('a-heading').textContent = a.heading || '';
+  document.getElementById('a-paras').innerHTML = (a.paragraphs || []).map(t => `<p>${t}</p>`).join('');
+  document.getElementById('a-facts').innerHTML = (a.facts || []).map(f => `<dt>${f.label}</dt><dd>${f.value}</dd>`).join('');
+  const li = document.getElementById('f-linkedin'); li.href = p.linkedin || '#';
+  const em = document.getElementById('f-email'); em.href = 'mailto:' + (p.email || '');
+}).catch(()=>{});
+</script>
 </body>
 </html>
