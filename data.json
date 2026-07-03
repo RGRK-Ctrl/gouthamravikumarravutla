@@ -52,7 +52,14 @@
       "name": "Product Management"
     }
   ],
-  "blogs": [],
+  "blogs": [
+    {
+      "topic": "ux",
+      "title": "Hick's Law",
+      "url": "https://www.linkedin.com/pulse/hicks-law-goutham-ravi-kumar-ravutla-nd9mc/?trackingId=j1x7W75JQ8qyUcgChP2Jhg%3D%3D",
+      "blurb": "The time taken to make a decision increases with the complexity and the number of options"
+    }
+  ],
   "projects": [
     {
       "name": "PM Navigator",
