@@ -55,6 +55,42 @@
   "blogs": [
     {
       "topic": "ux",
+      "title": "Peak-End rule",
+      "url": "https://www.linkedin.com/pulse/peak-end-rule-goutham-ravi-kumar-ravutla-buqhc/?trackingId=vctYSw8NSdyjMYsH%2FLWJSA%3D%3D",
+      "blurb": "People tend to judge an experience based on its most intense point (the \"peak\") and its conclusion (the \"end\"), rather than the overall duration or the entire experience"
+    },
+    {
+      "topic": "ux",
+      "title": "Law of Common Region",
+      "url": "https://www.linkedin.com/pulse/law-common-region-goutham-ravi-kumar-ravutla-iuwkc/?trackingId=GkNj9QrPRAazMZqPMnMvvQ%3D%3D",
+      "blurb": "Elements tend to be perceived into groups if they are sharing an area with a clearly defined boundary."
+    },
+    {
+      "topic": "ux",
+      "title": "Goal Gradient Hypothesis",
+      "url": "https://www.linkedin.com/pulse/goal-gradient-hypothesis-goutham-ravi-kumar-ravutla-5ontc/?trackingId=scw0AAw1RNOv88PmHx3ccA%3D%3D",
+      "blurb": "Individuals are more motivated to complete a task as they perceive they are nearing the end of it"
+    },
+    {
+      "topic": "ux",
+      "title": "Aesthetic-Usability Effect",
+      "url": "https://www.linkedin.com/pulse/aesthetic-usability-effect-goutham-ravi-kumar-ravutla-x2u9c/?trackingId=ku7VxivRRhCJU4X5L9pvJw%3D%3D",
+      "blurb": "Users tend to perceive more aesthetically pleasing designs as easier to use than less aesthetically pleasing ones, even if no actual usability difference exists"
+    },
+    {
+      "topic": "ux",
+      "title": "Paradox of the Active User",
+      "url": "https://www.linkedin.com/pulse/paradox-active-user-goutham-ravi-kumar-ravutla-b1nlc/?trackingId=zGRz2E4HRQ6P2H%2Bqmykq%2Fg%3D%3D",
+      "blurb": "Users never read manuals but start using the software immediately"
+    },
+    {
+      "topic": "ux",
+      "title": "Parkinson’s Law",
+      "url": "https://www.linkedin.com/pulse/parkinsons-law-goutham-ravi-kumar-ravutla-fvvqc/?trackingId=%2FLLjAUZ6T%2FClrWYqLwuH0g%3D%3D",
+      "blurb": "Work expands to fill the time available for its completion. This can lead to procrastination and inefficient use of time"
+    },
+    {
+      "topic": "ux",
       "title": "Fitt's Law",
       "url": "https://www.linkedin.com/pulse/fitts-law-goutham-ravi-kumar-ravutla-biazf/?trackingId=3bgaLm7kTjyNKYlu%2BAFEZQ%3D%3D",
       "blurb": "The time required to reach a target depends on the distance to the target and the size of the target"
@@ -112,6 +148,11 @@
           "title": "TECH BLOG - 2",
           "url": "https://www.linkedin.com/pulse/copy-building-ai-powered-food-classification-system-ravutla-bkacc/?trackingId=GVtwhO%2BPTCaXB6E2PB%2BPKw%3D%3D",
           "blurb": "The next major steps were image preprocessing, training, and evaluation in the Model building process"
+        },
+        {
+          "title": "Product Breakdown",
+          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-product-ravutla-qamcc/?trackingId=pSij6KHiTPq7%2F3%2F0yB0Gzw%3D%3D",
+          "blurb": "Identify over 100 food items, complete with dataset analysis, model training stages, evaluation artifacts, predictions, and a user-facing dashboard."
         }
       ]
     },
