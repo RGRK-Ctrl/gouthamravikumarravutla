@@ -16,22 +16,10 @@
       "I care about platform thinking, cross-functional execution, and the unglamorous adoption work that decides whether a product survives."
     ],
     "facts": [
-      {
-        "label": "Now",
-        "value": "Associate PM, Zoho QuickML"
-      },
-      {
-        "label": "Focus",
-        "value": "AI/ML & GenAI platforms"
-      },
-      {
-        "label": "Strengths",
-        "value": "Platform thinking · API-first · 0→1"
-      },
-      {
-        "label": "Based in",
-        "value": "Bangalore, India"
-      }
+      { "label": "Now", "value": "Associate PM, Zoho QuickML" },
+      { "label": "Focus", "value": "AI/ML & GenAI platforms" },
+      { "label": "Strengths", "value": "Platform thinking · API-first · 0→1" },
+      { "label": "Based in", "value": "Bangalore, India" }
     ]
   },
   "contact": {
@@ -39,130 +27,27 @@
     "text": "Open to Product Manager and Technical Product Manager roles in teams building AI platforms, developer platforms, and intelligent SaaS."
   },
   "blogTopics": [
-    {
-      "id": "ux",
-      "name": "UX Laws"
-    },
-    {
-      "id": "ai",
-      "name": "AI"
-    },
-    {
-      "id": "pm",
-      "name": "Product Management"
-    }
+    { "id": "ux", "name": "UX Laws" },
+    { "id": "ai", "name": "AI" },
+    { "id": "pm", "name": "Product Management" }
   ],
-  "blogs": [
-    {
-      "topic": "ux",
-      "title": "Peak-End rule",
-      "url": "https://www.linkedin.com/pulse/peak-end-rule-goutham-ravi-kumar-ravutla-buqhc/?trackingId=vctYSw8NSdyjMYsH%2FLWJSA%3D%3D",
-      "blurb": "People tend to judge an experience based on its most intense point (the \"peak\") and its conclusion (the \"end\"), rather than the overall duration or the entire experience"
-    },
-    {
-      "topic": "ux",
-      "title": "Law of Common Region",
-      "url": "https://www.linkedin.com/pulse/law-common-region-goutham-ravi-kumar-ravutla-iuwkc/?trackingId=GkNj9QrPRAazMZqPMnMvvQ%3D%3D",
-      "blurb": "Elements tend to be perceived into groups if they are sharing an area with a clearly defined boundary."
-    },
-    {
-      "topic": "ux",
-      "title": "Goal Gradient Hypothesis",
-      "url": "https://www.linkedin.com/pulse/goal-gradient-hypothesis-goutham-ravi-kumar-ravutla-5ontc/?trackingId=scw0AAw1RNOv88PmHx3ccA%3D%3D",
-      "blurb": "Individuals are more motivated to complete a task as they perceive they are nearing the end of it"
-    },
-    {
-      "topic": "ux",
-      "title": "Aesthetic-Usability Effect",
-      "url": "https://www.linkedin.com/pulse/aesthetic-usability-effect-goutham-ravi-kumar-ravutla-x2u9c/?trackingId=ku7VxivRRhCJU4X5L9pvJw%3D%3D",
-      "blurb": "Users tend to perceive more aesthetically pleasing designs as easier to use than less aesthetically pleasing ones, even if no actual usability difference exists"
-    },
-    {
-      "topic": "ux",
-      "title": "Paradox of the Active User",
-      "url": "https://www.linkedin.com/pulse/paradox-active-user-goutham-ravi-kumar-ravutla-b1nlc/?trackingId=zGRz2E4HRQ6P2H%2Bqmykq%2Fg%3D%3D",
-      "blurb": "Users never read manuals but start using the software immediately"
-    },
-    {
-      "topic": "ux",
-      "title": "Parkinson’s Law",
-      "url": "https://www.linkedin.com/pulse/parkinsons-law-goutham-ravi-kumar-ravutla-fvvqc/?trackingId=%2FLLjAUZ6T%2FClrWYqLwuH0g%3D%3D",
-      "blurb": "Work expands to fill the time available for its completion. This can lead to procrastination and inefficient use of time"
-    },
-    {
-      "topic": "ux",
-      "title": "Fitt's Law",
-      "url": "https://www.linkedin.com/pulse/fitts-law-goutham-ravi-kumar-ravutla-biazf/?trackingId=3bgaLm7kTjyNKYlu%2BAFEZQ%3D%3D",
-      "blurb": "The time required to reach a target depends on the distance to the target and the size of the target"
-    },
-    {
-      "topic": "ux",
-      "title": "Jakob's Law",
-      "url": "https://www.linkedin.com/pulse/jakobs-law-goutham-ravi-kumar-ravutla-mljkc/?trackingId=mt5X96dFR1uZfciSPANCAg%3D%3D",
-      "blurb": "Users spend most of their time on other sites, and they expect your site to work the same way."
-    },
-    {
-      "topic": "ux",
-      "title": "Miller's Law",
-      "url": "https://www.linkedin.com/pulse/millers-law-goutham-ravi-kumar-ravutla-xnnzc/?trackingId=ZtJYTj7HTXGKSdvvbGQjUA%3D%3D",
-      "blurb": "The working memory of the average person can retain approximately 7 (+- 2) items at a given time."
-    },
-    {
-      "topic": "ux",
-      "title": "Hick's Law",
-      "url": "https://www.linkedin.com/pulse/hicks-law-goutham-ravi-kumar-ravutla-nd9mc/?trackingId=j1x7W75JQ8qyUcgChP2Jhg%3D%3D",
-      "blurb": "The time taken to make a decision increases with the complexity and the number of options"
-    }
-  ],
+  "blogs": [],
   "projects": [
     {
-      "name": "PM Navigator",
-      "year": "2026",
-      "type": "RAG + multi-agent system",
-      "url": "[PM_NAVIGATOR_GITHUB_URL]",
-      "link": "GitHub",
-      "external": true,
+      "name": "PM Navigator", "year": "2026", "type": "RAG + multi-agent system",
+      "url": "[PM_NAVIGATOR_GITHUB_URL]", "link": "GitHub", "external": true,
       "blurb": "An AI multi-agent system that reads the live PM job market, finds your skill gaps against standard competency frameworks, and generates a 30/60/90-day plan. Built locally on Ollama (qwen2.5:14b) with a ChromaDB knowledge base and reflexion-pattern critique agents.",
       "articles": []
     },
     {
-      "name": "Food Detector App",
-      "year": "2025",
-      "type": "Computer vision",
-      "url": "[FOOD_DETECTOR_BLOG_URL]",
-      "link": "Blog",
-      "external": true,
+      "name": "Food Detector App", "year": "2025", "type": "Computer vision",
+      "url": "[FOOD_DETECTOR_BLOG_URL]", "link": "Blog", "external": true,
       "blurb": "A food-image classifier for 101 items with confidence scores, built on EfficientNetV2B0 transfer learning, a custom preprocessing pipeline, and a feedback-driven dataset improvement loop.",
-      "articles": [
-        {
-          "title": "🚀 Building an AI-powered Food Classification System 🍔🍕🥗",
-          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-journey-ravutla-g2irc/?trackingId=ZhAecSyhScKPieJMkjYGIA%3D%3D",
-          "blurb": "A fully functioning food recognition app that can classify 101 different food items with the basic capability to upload & predict, and generate proper responses with confidence scores for further analysis"
-        },
-        {
-          "title": "TECH BLOG -1",
-          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-tech-ravutla-1uscc/?trackingId=nRcahwSFQTGMo7NTbKCfDQ%3D%3D",
-          "blurb": "Our Food Detector app uses a Convolutional Neural Network, a class of deep learning algorithms, is used to train our classification model. In this article, we will go through the technical design choices and engineering that brought it to life"
-        },
-        {
-          "title": "TECH BLOG - 2",
-          "url": "https://www.linkedin.com/pulse/copy-building-ai-powered-food-classification-system-ravutla-bkacc/?trackingId=GVtwhO%2BPTCaXB6E2PB%2BPKw%3D%3D",
-          "blurb": "The next major steps were image preprocessing, training, and evaluation in the Model building process"
-        },
-        {
-          "title": "Product Breakdown",
-          "url": "https://www.linkedin.com/pulse/building-ai-powered-food-classification-system-product-ravutla-qamcc/?trackingId=pSij6KHiTPq7%2F3%2F0yB0Gzw%3D%3D",
-          "blurb": "Identify over 100 food items, complete with dataset analysis, model training stages, evaluation artifacts, predictions, and a user-facing dashboard."
-        }
-      ]
+      "articles": []
     },
     {
-      "name": "Hardcopy",
-      "year": "2021",
-      "type": "Peer-to-peer mobile app",
-      "url": "[HARDCOPY_BLOG_URL]",
-      "link": "Blog",
-      "external": true,
+      "name": "HARDCOPY", "year": "2021", "type": "Peer-to-peer mobile app",
+      "url": "[HARDCOPY_BLOG_URL]", "link": "Blog", "external": true,
       "blurb": "Founded a peer-to-peer book lending/borrowing platform. Ran user research (55+ survey responses), led a 5-person cross-functional team, scoped ~100 low-fi wireframes, and built the MVP roadmap.",
       "articles": []
     }
