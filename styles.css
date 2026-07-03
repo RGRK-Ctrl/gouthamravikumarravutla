@@ -164,3 +164,11 @@ footer a:hover{color:var(--accent)}
 .pillar-head h2{font-size:26px}
 .pillar-head .count{font-size:13px;color:var(--muted)}
 .pillar > .desc{color:var(--muted);margin:0 0 20px;max-width:60ch}
+
+/* ===== work hub: tabs ===== */
+.tabs{display:flex;gap:6px;background:#F0F3F2;border:1px solid var(--line);border-radius:12px;padding:5px;width:fit-content;margin-bottom:32px}
+.tab{border:0;background:transparent;font-family:"Inter",sans-serif;font-size:15px;font-weight:600;color:var(--muted);padding:9px 22px;border-radius:8px;cursor:pointer;transition:all .18s}
+.tab:hover{color:var(--ink)}
+.tab.active{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+.tabpanel{display:none}
+.tabpanel.active{display:block}

@@ -1,23 +1,19 @@
 # Goutham Ravi Kumar Ravutla — PM Portfolio
 
-Static multi-page site. No build step. Hosts free on GitHub Pages.
+Static multi-page site + a local admin form.
 
-## Pages
-- index.html   — About (name, role, headline, summary, current company)
-- work.html    — Work, grouped into topics: UX Laws / AI / Product Management
-- blogs.html   — LinkedIn articles
+## Public site (goes in the GitHub repo)
+- index.html   — About
+- work.html    — Work: Blogs (topic-wise) + Projects (each with related articles). Reads content from data.json.
 - contact.html — Email + LinkedIn
-- styles.css / script.js — shared styling and nav
+- data.json    — ALL blog/project content lives here (edited by the admin form)
+- styles.css / script.js
 
-## Add a Work item or topic
-Edit the DATA block near the bottom of work.html (marked "WORK PAGE DATA").
+## admin.html (KEEP LOCAL — do NOT upload to the repo)
+A form to add blogs/projects. Open it in your browser, paste your GitHub token,
+Connect, fill the form, Publish. It commits to data.json and the live site updates in ~1 min.
 
-## Add a LinkedIn blog
-Edit the DATA block near the bottom of blogs.html (marked "BLOGS DATA").
-
-## Deploy to GitHub Pages
-1. New PUBLIC repo named  yourusername.github.io
-2. Upload all files (Add file -> Upload files -> drag everything in -> Commit)
-3. Settings -> Pages -> Deploy from a branch -> main -> / (root) -> Save
-4. Live at https://yourusername.github.io/ in ~1 min
-Any edit you commit auto-redeploys.
+## Deploy the site
+1. Copy index.html, work.html, contact.html, data.json, styles.css, script.js into your repo folder
+2. git add -A && git commit -m "Data-driven site" && git push
+3. Settings -> Pages -> main -> / (root)

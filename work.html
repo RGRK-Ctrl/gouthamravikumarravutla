@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Work · Goutham Ravi Kumar Ravutla</title>
-<meta name="description" content="Product work and projects, grouped by topic: UX Laws, AI, and Product Management.">
+<meta name="description" content="Product work — blogs by topic and projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,7 +19,6 @@
     <div class="navlinks" id="nav">
       <a href="index.html">About</a>
       <a href="work.html" class="subnav-active">Work</a>
-      <a href="blogs.html">Blogs</a>
       <a href="contact.html" class="btn">Get in touch</a>
     </div>
   </div>
@@ -28,15 +27,25 @@
 <header class="page-head">
   <div class="wrap">
     <p class="eyebrow">Work</p>
-    <h1>Projects and topics I work in.</h1>
-    <p class="lede">Grouped by the three areas I build and write about. Filter to jump to one.</p>
+    <h1>Blogs and projects.</h1>
+    <p class="lede">Writing grouped by topic, and the projects I&rsquo;ve built.</p>
   </div>
 </header>
 
-<section style="padding-top:36px">
+<section style="padding-top:32px">
   <div class="wrap">
-    <div class="filters" id="filters"></div>
-    <div id="groups"></div>
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="blogs">Blogs</button>
+      <button class="tab" data-tab="projects">Projects</button>
+    </div>
+    <div class="tabpanel active" id="panel-blogs">
+      <div class="filters" id="blog-filters"></div>
+      <div id="blog-groups"><p class="empty">Loading&hellip;</p></div>
+    </div>
+    <div class="tabpanel" id="panel-projects">
+      <div class="filters" id="proj-filters"></div>
+      <div id="proj-list"></div>
+    </div>
   </div>
 </section>
 
@@ -49,79 +58,65 @@
 
 <script src="script.js"></script>
 <script>
-/* =========================================================
-   WORK PAGE DATA  —  the only thing you edit.
+/* Content is loaded from data.json — do not hand-edit here.
+   Add entries with your local admin form (admin.html). */
+let DATA = { blogTopics:[], blogs:[], projects:[] };
 
-   TO ADD A NEW TOPIC: add one line to TOPICS:
-     { id:"unique_id", name:"Topic Name", desc:"One line about it." },
+document.querySelectorAll('.tab').forEach(t => t.onclick = () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.tabpanel').forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById('panel-' + t.dataset.tab).classList.add('active');
+});
 
-   TO ADD AN ITEM: add one block to ITEMS:
-     { topic:"matching_id", title:"Title", blurb:"One line.",
-       url:"https://...", link:"GitHub", external:true },
-   - link can be "GitHub", "LinkedIn", "Blog", "Live" or "" (no button)
-   - external:true opens in a new tab
-   ========================================================= */
-const TOPICS = [
-  { id:"ux", name:"UX Laws",           desc:"Applying UX principles and heuristics to product decisions." },
-  { id:"ai", name:"AI",                desc:"ML, GenAI, RAG and multi-agent systems — built and shipped." },
-  { id:"pm", name:"Product Management",desc:"Discovery, prioritization, roadmapping and 0&rarr;1 product craft." }
-];
-
-const ITEMS = [
-  // ---- AI ----
-  { topic:"ai", title:"PM Navigator (2026)", link:"GitHub", external:true,
-    url:"[PM_NAVIGATOR_GITHUB_URL]",
-    blurb:"RAG + multi-agent system that reads the live PM job market, finds your skill gaps, and generates a 30/60/90-day plan. Built locally on Ollama with qwen2.5:14b and a ChromaDB knowledge base." },
-  { topic:"ai", title:"Food Detector App (2025)", link:"Blog", external:true,
-    url:"[FOOD_DETECTOR_BLOG_URL]",
-    blurb:"Vision model classifying 101 food items with confidence scores, using EfficientNetV2B0 transfer learning and a feedback-driven dataset loop." },
-  { topic:"ai", title:"GenAI capabilities at Zoho QuickML", link:"", external:false,
-    url:"",
-    blurb:"Led product definition for LLM serving, RAG-based knowledge systems, and foundational model integration on a centralized AI platform." },
-
-  // ---- Product Management ----
-  { topic:"pm", title:"QuickML pipeline builder", link:"", external:false,
-    url:"",
-    blurb:"Own the drag-and-drop workflow engine that lets non-technical users build end-to-end ML pipelines. Supports 2K+ businesses." },
-  { topic:"pm", title:"HARDCOPY (2021)", link:"Blog", external:true,
-    url:"[HARDCOPY_BLOG_URL]",
-    blurb:"Founded a peer-to-peer book lending platform. User research (55+ responses), a 5-person cross-functional team, ~100 wireframes, and an MVP roadmap." },
-
-  // ---- UX Laws ----
-  { topic:"ux", title:"[Your first UX Laws write-up]", link:"LinkedIn", external:true,
-    url:"[UX_ARTICLE_URL]",
-    blurb:"[One line on which UX law you applied and the product decision it drove.]" }
-];
-/* ========================================================= */
-
-const filtersEl = document.getElementById('filters');
-const groupsEl  = document.getElementById('groups');
-let active = "all";
-
-function render(){
-  const chips = [{id:"all",name:"All"}, ...TOPICS];
-  filtersEl.innerHTML = chips.map(c =>
-    `<button class="chip ${c.id===active?'active':''}" data-id="${c.id}">${c.name}</button>`).join('');
-  filtersEl.querySelectorAll('.chip').forEach(b => b.onclick = () => { active=b.dataset.id; render(); });
-
-  const shown = TOPICS.filter(t => active==="all" || t.id===active);
+const bf = document.getElementById('blog-filters');
+const bg = document.getElementById('blog-groups');
+let blogActive = "all";
+function renderBlogs(){
+  const chips = [{id:"all",name:"All"}, ...DATA.blogTopics];
+  bf.innerHTML = chips.map(c => `<button class="chip ${c.id===blogActive?'active':''}" data-id="${c.id}">${c.name}</button>`).join('');
+  bf.querySelectorAll('.chip').forEach(b => b.onclick = () => { blogActive=b.dataset.id; renderBlogs(); });
+  const topics = DATA.blogTopics.filter(t => blogActive==="all" || t.id===blogActive);
   let html = "";
-  shown.forEach(t => {
-    const items = ITEMS.filter(i => i.topic===t.id);
-    html += `<div class="pillar"><div class="pillar-head"><h2>${t.name}</h2><span class="count">${items.length} item${items.length!==1?'s':''}</span></div><p class="desc">${t.desc}</p><div class="link-list">`;
-    if(!items.length){ html += `<p class="empty">Nothing here yet.</p>`; }
-    items.forEach(i => {
-      const badge = i.link ? `<span class="src ${i.link.toLowerCase()==='linkedin'?'linkedin':'onsite'}">${i.link}${i.external?' &#8599;':''}</span>` : '';
-      const tag = i.url ? 'a' : 'div';
-      const attrs = i.url ? `href="${i.url}"${i.external?' target="_blank" rel="noopener"':''}` : '';
-      html += `<${tag} class="link-item" ${attrs}>
-        <span class="li-main"><h3>${i.title} ${badge}</h3><p>${i.blurb}</p></span></${tag}>`;
+  topics.forEach(t => {
+    const items = DATA.blogs.filter(x => x.topic===t.id);
+    if(!items.length) return;
+    html += `<div class="pillar"><div class="pillar-head"><h2>${t.name}</h2><span class="count">${items.length} post${items.length!==1?'s':''}</span></div><div class="link-list">`;
+    items.forEach(x => {
+      html += `<a class="link-item" href="${x.url}" target="_blank" rel="noopener"><span class="li-main"><h3>${x.title} <span class="src linkedin">LinkedIn &#8599;</span></h3><p>${x.blurb}</p></span></a>`;
     });
     html += `</div></div>`;
   });
-  groupsEl.innerHTML = html;
+  bg.innerHTML = html || `<p class="empty">No posts yet.</p>`;
 }
-render();
+
+const pf = document.getElementById('proj-filters');
+const pl = document.getElementById('proj-list');
+let projActive = "all";
+function renderProjects(){
+  const chips = [{name:"All"}, ...DATA.projects.map(p => ({name:p.name}))];
+  pf.innerHTML = chips.map(c => {
+    const val = c.name==='All'?'all':c.name;
+    return `<button class="chip ${val===projActive?'active':''}" data-name="${val}">${c.name}</button>`;
+  }).join('');
+  pf.querySelectorAll('.chip').forEach(b => b.onclick = () => { projActive=b.dataset.name; renderProjects(); });
+  const items = DATA.projects.filter(p => projActive==="all" || p.name===projActive);
+  pl.innerHTML = items.map(p => {
+    const badge = p.link ? `<span class="src ${p.link.toLowerCase()==='linkedin'?'linkedin':'onsite'}">${p.link}${p.external?' &#8599;':''}</span>` : '';
+    const nameTag = p.url ? `<a href="${p.url}"${p.external?' target="_blank" rel="noopener"':''} style="color:inherit">${p.name} ${badge}</a>` : `${p.name} ${badge}`;
+    let arts = "";
+    if(p.articles && p.articles.length){
+      arts = `<h4 style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:18px 0 10px">Related articles</h4><div class="link-list">` +
+        p.articles.map(a => `<a class="link-item" href="${a.url}" target="_blank" rel="noopener"><span class="li-main"><h3>${a.title} <span class="src linkedin">LinkedIn &#8599;</span></h3><p>${a.blurb}</p></span></a>`).join('') + `</div>`;
+    }
+    return `<div class="pillar"><div class="pillar-head"><h2>${nameTag}</h2><span class="count">${p.year} &middot; ${p.type}</span></div><p class="desc">${p.blurb}</p>${arts}</div>`;
+  }).join('');
+}
+
+fetch('data.json?' + Date.now())
+  .then(r => r.json())
+  .then(d => { DATA = d; renderBlogs(); renderProjects(); })
+  .catch(() => { bg.innerHTML = `<p class="empty">Couldn&rsquo;t load content. (This works once the site is live on GitHub Pages.)</p>`; });
 </script>
 </body>
 </html>
