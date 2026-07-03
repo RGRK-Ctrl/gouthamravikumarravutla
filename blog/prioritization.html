@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RICE won't tell you what to build · Goutham</title>
+<meta name="description" content="How to actually use scoring frameworks like RICE — and where they quietly mislead product teams.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Goutham<span>.</span></a>
+    <div class="navlinks" id="nav">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#writing">Writing</a>
+      <a href="../index.html#contact" class="btn">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<article class="article">
+  <a href="../index.html#writing" class="back">← All writing</a>
+  <div class="meta">Prioritization · 6 min read</div>
+  <h1>RICE won't tell you what to build</h1>
+
+  <p>Every prioritization framework promises the same thing: feed it your options, turn the crank, and out comes a ranked list you can defend in a roadmap review. RICE, ICE, weighted scoring — they all sell certainty. And the moment a team starts treating that ranked list as the decision rather than an input to it, the framework quietly starts making bad calls on their behalf.</p>
+
+  <p>I still use RICE constantly. But I use it as a conversation, not a calculator.</p>
+
+  <h2>What the score is actually good for</h2>
+  <p>RICE forces four questions into the open: how many people does this reach, how much does it move the needle for each, how sure are we, and what will it cost. The value isn't the number that pops out. It's that a room full of people with different intuitions now have to say, out loud, what they believe about each of those variables — and defend it.</p>
+
+  <p>The best moments in a prioritization session are the arguments. Two engineers disagree about effort by a factor of three. Sales and research disagree about reach by an order of magnitude. Those gaps are the signal. They tell you where the team's mental model of the product is fractured, and that's far more useful than any ranking.</p>
+
+  <blockquote>The framework's job is to surface disagreement early, where it's cheap. Not to end it.</blockquote>
+
+  <h2>Where it quietly misleads</h2>
+  <p>Three failure modes show up again and again:</p>
+
+  <p><strong>False precision.</strong> A confidence of 80% versus 70% swings the score, but nobody can actually distinguish those two states. Teams tune the inputs until the output matches what they already wanted to build. If you find yourself adjusting confidence to justify a favorite, the framework has stopped working and become theater.</p>
+
+  <p><strong>Reach beats everything.</strong> RICE multiplies, so a feature that touches a huge population always floats to the top — even when its impact per person is trivial. Meanwhile the deep, transformative bet for a small, high-value segment sinks. If your business is enterprise, this bias is actively dangerous.</p>
+
+  <p><strong>It can't see sequence.</strong> A score treats each item as independent. But roadmaps are paths, not baskets. The item that unlocks three others, or that de-risks the scariest assumption first, deserves priority the math will never capture on its own.</p>
+
+  <h2>How I actually run it</h2>
+  <ol>
+    <li>Score everything fast, together, with rough numbers. The goal is to trigger the arguments, not to be accurate.</li>
+    <li>Circle every row where estimates diverged wildly. Spend the session there.</li>
+    <li>Pull the top cluster — not the top item — and re-rank <em>that</em> by hand, using judgment the score can't hold: sequencing, strategic fit, learning value.</li>
+    <li>Write down why the final order differs from the raw score. That sentence is the real artifact.</li>
+  </ol>
+
+  <p>The output of prioritization should never be "the model said so." It should be a decision a human made, informed by the model, that you can explain to the team who has to build it and the customer who has to live with it.</p>
+
+  <p>Frameworks are scaffolding. You still have to build the building.</p>
+
+  <a href="../index.html#writing" class="back" style="margin-top:32px">← All writing</a>
+</article>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> Goutham.</span>
+    <span><a href="../index.html">Home</a></span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
